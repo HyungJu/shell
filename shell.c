@@ -175,7 +175,7 @@ bool    cmd_folder(int argc, char *argv[] )
         else if(argc == 3) {
                 mkdir(argv[1],argv[2]);
         }else {
-                printf("USAGE: mkdir [name] [permission]\n");
+                printf("USAGE: folder [name] [permission]\n");
         }
         return true;
 }
