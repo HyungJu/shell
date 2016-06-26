@@ -154,7 +154,7 @@ bool    cmd_cd(int argc, char *argv[]);
 bool    cmd_exit(int argc, char *argv[]);
 bool    cmd_help(int argc, char *argv[]);
 bool    cmd_folder(int argc, char *argv[]);
-bool    cmd_alias(int argc, char *argv[]);
+bool    cmd_block(int argc, char *argv[]);
 struct COMMAND  builtin_cmds[] = {
         {"cd",          "change directory",     cmd_cd  },
         {"exit",        "exit this shell",      cmd_exit},
@@ -162,7 +162,8 @@ struct COMMAND  builtin_cmds[] = {
         {"help",        "show this help",       cmd_help},
         {"?",           "show this help",       cmd_help},
         {"folder",      "make folder",       cmd_folder},
-        {"alias",      "Fuck You",       cmd_alias}
+        {"alias",      "Fuck You",       cmd_block},
+		{"dd","Fuck You",  		cmd_block}
 };
 
 
@@ -179,9 +180,9 @@ bool    cmd_folder(int argc, char *argv[] )
         }
         return true;
 }
-bool    cmd_alias(int argc, char *argv[] )
+bool    cmd_block(int argc, char *argv[] )
 {
-	printf("Fuck You! Kernel Developer!!");
+	printf("Fuck You! Kernel Developer!!\n I blocked your fucking blacklist \n YEAH\n ");
         return true;
 }
 
