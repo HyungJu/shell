@@ -154,7 +154,7 @@ bool    cmd_cd(int argc, char *argv[]);
 bool    cmd_exit(int argc, char *argv[]);
 bool    cmd_help(int argc, char *argv[]);
 bool    cmd_folder(int argc, char *argv[]);
-bool    cmd_txt(int argc, char *argv[]);
+bool    cmd_alias(int argc, char *argv[]);
 struct COMMAND  builtin_cmds[] = {
         {"cd",          "change directory",     cmd_cd  },
         {"exit",        "exit this shell",      cmd_exit},
@@ -162,7 +162,7 @@ struct COMMAND  builtin_cmds[] = {
         {"help",        "show this help",       cmd_help},
         {"?",           "show this help",       cmd_help},
         {"folder",      "make folder",       cmd_folder},
-        {"txt",      "simple txt",       cmd_txt}
+        {"alias",      "Fuck You",       cmd_alias}
 };
 
 
@@ -179,27 +179,9 @@ bool    cmd_folder(int argc, char *argv[] )
         }
         return true;
 }
-bool    cmd_txt(int argc, char *argv[] )
+bool    cmd_alias(int argc, char *argv[] )
 {
-	FILE *fp;
-	 if(argc == 2) {
-       fp = fopen (argv[1],"w+");
-	printf ("Simple Text Editor ");
-
-	 char line[102400];
-    
-                printf("%s TXT: ");
-                fgets(line, sizeof(line) - 1, stdin);
-	
-
-	
-        
-		fprintf (fp,line);
-	 }
-	
-        else {
-                printf("USAGE: txt [file name]\n");
-        }
+	printf("Fuck You! Kernel Developer!!");
         return true;
 }
 
